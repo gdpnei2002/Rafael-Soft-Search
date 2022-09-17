@@ -16,9 +16,6 @@ export function ProdCard({coffee}: CoffeeProps){
             <img src={`/coffees/${coffee.photo}`} alt=""/>
             <Name>
                 {coffee.name}
-                {/* {coffee.name.map((name) => (
-                    <span key={`${coffee.id}${name}`}>{name}</span>
-                    ))} */}
             </Name>
             <Description>
                 {coffee.description}

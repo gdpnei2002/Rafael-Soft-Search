@@ -5,17 +5,12 @@ import { useState } from "react";
 
 export function OurProd(){
     const [busca, setBusca] = useState('')
-    const coffeesFiltrados = coffees.filter((coffees) => coffees.name.includes(busca))
+    const coffeesFiltrados = coffees.filter((coffees) => coffees.name.toLocaleLowerCase().includes(busca.toLowerCase()))
     console.log(busca)
 
     return(
         <OurProdContainer className="container">
             <input type="text" value={busca} onChange={(ev) => setBusca(ev.target.value)} />
-            {/* <select onChange={(ev) => setBusca(ev.target.value)}>
-                    <option value="Tradicional ">Tradicional</option>
-                    <option value="com leite">com leite</option>
-                    <option value="Especial ">Especial</option> 
-                </select>*/}
             <ProdList>
                             {coffeesFiltrados.map((coffee) => (
                             <ProdCard key={coffee.id} coffee={coffee} />
