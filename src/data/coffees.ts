@@ -3,7 +3,7 @@ export const coffees = [
       id: 1,
       name: "Expresso Tradicional",
       description: "O tradicional café feito com água quente e grãos moídos",
-      link: "https://github.com/gdpnei2002/landingpage/tree/develop",
+      link: "https://www.99freelas.com.br/dashboard",
       photo: "tradicional.png",
     },
     {
