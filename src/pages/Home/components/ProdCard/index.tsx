@@ -4,6 +4,7 @@ export interface Coffee {
     name: string;
     description: string;
     photo: string;
+    link: string;
   }
 
   interface CoffeeProps {
@@ -20,6 +21,8 @@ export function ProdCard({coffee}: CoffeeProps){
             <Description>
                 {coffee.description}
             </Description>
+            <a href="{coffee.link}">
+            link</a>
         </ProdCardContainer>
     )
 }
