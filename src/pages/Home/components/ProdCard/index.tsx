@@ -21,7 +21,7 @@ export function ProdCard({coffee}: CoffeeProps){
             <Description>
                 {coffee.description}
             </Description>
-            <a href="{coffee.link}">
+            <a href={coffee.link}>
             link</a>
         </ProdCardContainer>
     )

@@ -4,9 +4,8 @@ import { coffees } from "../../../../data/coffees";
 import { useState } from "react";
 
 export function OurProd(){
-    const [busca, setBusca] = useState('')
+    const [busca, setBusca] = useState('buscar...')
     const coffeesFiltrados = coffees.filter((coffees) => coffees.name.toLocaleLowerCase().includes(busca.toLowerCase()))
-    console.log(busca)
 
     return(
         <OurProdContainer className="container">
