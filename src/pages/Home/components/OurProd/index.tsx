@@ -3,18 +3,30 @@ import { OurProdContainer, ProdList } from "./styles";
 import { coffees } from "../../../../data/coffees";
 import { useState } from "react";
 
-export function OurProd(){
-    const [busca, setBusca] = useState('buscar...')
-    const coffeesFiltrados = coffees.filter((coffees) => coffees.name.toLocaleLowerCase().includes(busca.toLowerCase()))
+export function OurProd() {
+  const [search, setSearch] = useState("");
+  const coffeesFiltrados = coffees.filter((coffees) =>
+    coffees.name.toLocaleLowerCase().includes(search.toLowerCase())
+  );
+  console.log(search);
+  return (
+    <OurProdContainer className="container">
+      <input
+        type="text"
+        placeholder="buscar..."
+        value={search}
+        onChange={(ev) => setSearch(ev.target.value)}
+      />
 
-    return(
-        <OurProdContainer className="container">
-            <input type="text" value={busca} onChange={(ev) => setBusca(ev.target.value)} />
-            <ProdList>
-                            {coffeesFiltrados.map((coffee) => (
-                            <ProdCard key={coffee.id} coffee={coffee} />
-                        ))} 
-            </ProdList>
-        </OurProdContainer>
-    )
+      <ProdList>
+        {search.length === 0 ? (
+          <></>
+        ) : (
+          coffeesFiltrados.map((coffee) => (
+            <ProdCard key={coffee.id} coffee={coffee} />
+          ))
+        )}
+      </ProdList>
+    </OurProdContainer>
+  );
 }
