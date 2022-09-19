@@ -5,7 +5,7 @@ export function HomePage(){
 
     return(
         <HomeContainer>
-            <OurProd />
+                <OurProd />
         </HomeContainer>
     )
 }

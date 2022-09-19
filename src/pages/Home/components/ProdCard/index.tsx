@@ -1,4 +1,4 @@
-import { Description, Name, ProdCardContainer } from "./styles";
+import { Description, Name, ProdCardContainer, Link } from "./styles";
 
 export interface Coffee {
     name: string;
@@ -21,8 +21,9 @@ export function ProdCard({coffee}: CoffeeProps){
             <Description>
                 {coffee.description}
             </Description>
-            <a href={coffee.link}>
-            link</a>
+            <Link>
+                <a href={coffee.link}>Acessar conteúdo</a>
+            </Link>
         </ProdCardContainer>
     )
 }

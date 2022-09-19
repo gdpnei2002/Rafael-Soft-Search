@@ -1,6 +1,7 @@
 import { ProdCard } from "../ProdCard";
-import { OurProdContainer, ProdList } from "./styles";
+import { OurProdContainer, ProdList, Stlinks } from "./styles";
 import { coffees } from "../../../../data/coffees";
+
 import { useState } from "react";
 
 export function OurProd() {
@@ -10,10 +11,14 @@ export function OurProd() {
   );
   console.log(search);
   return (
+    <>
+    <Stlinks>
+      <img src="https://i.imgur.com/J2Ts1y5.jpeg" />
+     </Stlinks>
     <OurProdContainer className="container">
       <input
         type="text"
-        placeholder="buscar..."
+        placeholder="Procurar arquivo..."
         value={search}
         onChange={(ev) => setSearch(ev.target.value)}
       />
@@ -28,5 +33,22 @@ export function OurProd() {
         )}
       </ProdList>
     </OurProdContainer>
+      <br />
+    <Stlinks>
+                <p>
+                    <a href="#">Como baixar arquivos </a>|
+                    <a href="#"> Telegram </a>|
+                    <a href="#"> Fórum </a>|
+                    <a href="#"> Blog </a>|
+                    <a href="#"> Doodles </a>
+                </p>
+    </Stlinks> <br />
+    <Stlinks>
+                <div className="flex">
+                    <p>BTC DOAÇÃO: </p>
+                    <p className="btcode">18rfbQ7qZzxDLB9aR7AMH72Ytot6bMpbBN</p>
+                </div>
+      </Stlinks>
+    </>
   );
 }
