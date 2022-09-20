@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const OurProdContainer = styled.section`
-  width: 100%;
-  margin-top: 2rem;
-  
-  img{
-    height: 200px
-  }
+  margin-top: 2rem;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   
   input{
   background-image: url('https://i.imgur.com/E1XH3uO.png'); /* Add a search icon to input */
@@ -17,17 +16,24 @@ export const OurProdContainer = styled.section`
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+  max-width: 600px;
+
   }
 
 `;
 
 export const ProdList = styled.div`
-  width: 80%;
+  width: 100%;
+  max-width: 600px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
   row-gap: 2.5rem;
   margin-top: 3.5rem;
+
+  @media (max-width: 600px){
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Stlinks = styled.section`
@@ -51,6 +57,10 @@ img{
     }
     .flex{
         display: flex;
+        @media (max-width: 600px){
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+            }
         p{
         }
         .btcode{

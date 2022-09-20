@@ -16,22 +16,23 @@ export function OurProd() {
       <img src="https://i.imgur.com/J2Ts1y5.jpeg" />
      </Stlinks>
     <OurProdContainer className="container">
-      <input
-        type="text"
-        placeholder="Procurar arquivo..."
-        value={search}
-        onChange={(ev) => setSearch(ev.target.value)}
-      />
-
-      <ProdList>
-        {search.length === 0 ? (
-          <></>
-        ) : (
-          coffeesFiltrados.map((coffee) => (
-            <ProdCard key={coffee.id} coffee={coffee} />
-          ))
-        )}
-      </ProdList>
+      <div>
+        <input
+          type="text"
+          placeholder="Procurar arquivo..."
+          value={search}
+          onChange={(ev) => setSearch(ev.target.value)}
+        />
+        <ProdList>
+          {search.length === 0 ? (
+            <></>
+          ) : (
+            coffeesFiltrados.map((coffee) => (
+              <ProdCard key={coffee.id} coffee={coffee} />
+            ))
+          )}
+        </ProdList>
+      </div>
     </OurProdContainer>
       <br />
     <Stlinks>
