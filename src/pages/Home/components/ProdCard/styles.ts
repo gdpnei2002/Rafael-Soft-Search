@@ -5,19 +5,17 @@ export const ProdCardContainer = styled.div`
     width: 100%;
     background: white;
     border-radius: 6px;
-    border: 1px solid black;
 
     img {
         padding: 0;
         width: 100%;
-        border-bottom: 1px solid black;
     }
 
 `
 
 export const Link = styled.div`
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #717cf5;
+    border: none;
     padding:12px;
     border-radius: 20px;
     text-align: center;
@@ -39,9 +37,9 @@ export const Name = styled(TitleText).attrs({
     font-weight: 700;
     margin-bottom: 0.5rem;
     display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   `;
 
 export const Description = styled(RegularText).attrs({

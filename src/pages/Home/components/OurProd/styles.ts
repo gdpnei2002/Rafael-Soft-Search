@@ -8,16 +8,19 @@ export const OurProdContainer = styled.section`
   align-items: center;
   
   input{
-  background-image: url('https://i.imgur.com/E1XH3uO.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-  max-width: 600px;
-
+    background-image: url('https://i.imgur.com/E1XH3uO.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    max-width: 600px;
+    border-radius: 50px;
+      @media (max-width: 600px){
+        min-width: 300px;
+    }
   }
 
 `;
