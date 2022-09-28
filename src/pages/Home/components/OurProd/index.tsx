@@ -4,7 +4,9 @@ import { coffees } from "../../../../data/coffees";
 
 import { useState } from "react";
 
-export function OurProd() {
+import Logo from "../../../../assets/logo.png"
+
+export function OurProd(): JSX.Element {
   const [search, setSearch] = useState("");
   const coffeesFiltrados = coffees.filter((coffees) =>
     coffees.name.toLocaleLowerCase().includes(search.toLowerCase())
@@ -13,7 +15,7 @@ export function OurProd() {
   return (
     <>
     <Stlinks>
-      <img src="https://i.imgur.com/J2Ts1y5.jpeg" />
+      <img src={Logo} />
      </Stlinks>
     <OurProdContainer className="container">
       <div>
