@@ -12,5 +12,19 @@ export const coffees = [
       description: "Café expresso tradicional com espuma cremosa",
       link: "https://www.youtube.com/",
       photo: "cremoso.png",
+    },
+    {
+      id: 2,
+      name: "Expresso Cremoso",
+      description: "Café expresso tradicional com espuma cremosa",
+      link: "https://www.youtube.com/",
+      photo: "cremoso.png",
+    },
+    {
+      id: 2,
+      name: "Expresso Cremoso",
+      description: "Café expresso tradicional com espuma cremosa",
+      link: "https://www.youtube.com/",
+      photo: "cremoso.png",
     }
   ];

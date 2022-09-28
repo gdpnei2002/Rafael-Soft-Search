@@ -1,5 +1,5 @@
 import { ProdCard } from "../ProdCard";
-import { OurProdContainer, ProdList, Stlinks } from "./styles";
+import { OurProdContainer, ProdList, Stlinks, Container } from "./styles";
 import { coffees } from "../../../../data/coffees";
 
 import { useState } from "react";
@@ -17,25 +17,27 @@ export function OurProd(): JSX.Element {
     <Stlinks>
       <img src={Logo} />
      </Stlinks>
-    <OurProdContainer className="container">
-      <div>
-        <input
-          type="text"
-          placeholder="Procurar arquivo..."
-          value={search}
-          onChange={(ev) => setSearch(ev.target.value)}
-        />
-        <ProdList>
-          {search.length === 0 ? (
-            <></>
-          ) : (
-            coffeesFiltrados.map((coffee) => (
-              <ProdCard key={coffee.id} coffee={coffee} />
-            ))
-          )}
-        </ProdList>
-      </div>
-    </OurProdContainer>
+      <OurProdContainer>
+        <div>
+          <input
+            type="text"
+            placeholder="Procurar arquivo..."
+            value={search}
+            onChange={(ev) => setSearch(ev.target.value)}
+          />
+            <div className="center">
+              <ProdList>
+                  {search.length === 0 ? (
+                    <></>
+                  ) : (
+                    coffeesFiltrados.map((coffee) => (
+                      <ProdCard key={coffee.id} coffee={coffee} />
+                    ))
+                  )}
+              </ProdList>
+            </div>
+        </div>
+      </OurProdContainer>
       <br />
     <Stlinks>
                 <p>

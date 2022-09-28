@@ -40,6 +40,7 @@ export const Name = styled(TitleText).attrs({
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: Roboto;
   `;
 
 export const Description = styled(RegularText).attrs({

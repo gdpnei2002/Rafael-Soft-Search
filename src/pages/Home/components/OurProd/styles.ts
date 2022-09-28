@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.main`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const OurProdContainer = styled.section`
   margin-top: 2rem;  
   display: flex;
@@ -8,14 +15,14 @@ export const OurProdContainer = styled.section`
   align-items: center;
   
   input{
-    background-image: url('https://i.imgur.com/E1XH3uO.png'); /* Add a search icon to input */
-    background-position: 15px 20px ; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+    background-image: url('https://i.imgur.com/E1XH3uO.png');
+    background-position: 15px 20px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
     min-width: 600px;
     min-height: 60px;
     border-radius: 50px;
@@ -28,25 +35,36 @@ export const OurProdContainer = styled.section`
 `;
 
 export const ProdList = styled.div`
-  width: 100%;
-  max-width: 600px;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+    /* display: flex;
+  align-items: center;
+  justify-content: space-around;  */
+
+  margin-left: -70px;
+  width: 120%;
+  max-width: 1056px;
+
+  background-color:red;
+
   column-gap: 2rem;
   row-gap: 2.5rem;
   margin-top: 3.5rem;
+  place-items: center;
 
   @media (max-width: 600px){
     grid-template-columns: repeat(1, 1fr);
+    margin-left: -30px;
   }
 `;
 
 export const Stlinks = styled.section`
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 img{
   height: 200px;

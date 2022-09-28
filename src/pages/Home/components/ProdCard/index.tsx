@@ -18,9 +18,6 @@ export function ProdCard({coffee}: CoffeeProps){
             <Name>
                 {coffee.name}
             </Name>
-            <Description>
-                {coffee.description}
-            </Description>
             <Link>
                 <a href={coffee.link}>Acessar conteúdo</a>
             </Link>
