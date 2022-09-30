@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.main`
   display: flex;
@@ -8,13 +8,15 @@ export const Container = styled.main`
 `;
 
 export const OurProdContainer = styled.section`
-  margin-top: 2rem;  
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  input{
+  transition: all 0.3s;
+  align-items: center;
+
+  input {
     background-image: url('https://i.imgur.com/E1XH3uO.png');
     background-position: 15px 20px;
     background-repeat: no-repeat;
@@ -27,68 +29,53 @@ export const OurProdContainer = styled.section`
     min-height: 60px;
     border-radius: 50px;
     box-shadow: 5px 10px 8px #dddddd;
-      @media (max-width: 600px){
-        min-width: 300px;
+    @media (max-width: 600px) {
+      min-width: 300px;
     }
   }
-
 `;
 
 export const ProdList = styled.div`
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-    /* display: flex;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: space-around;  */
+  justify-content: center;
+  flex-wrap: wrap;
 
-  margin-left: -70px;
-  width: 120%;
   max-width: 1056px;
-
-  background-color:red;
+  width: 100%;
 
   column-gap: 2rem;
   row-gap: 2.5rem;
-  margin-top: 3.5rem;
-  place-items: center;
-
-  @media (max-width: 600px){
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: -30px;
-  }
 `;
 
 export const Stlinks = styled.section`
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-img{
-  height: 200px;
-}
-    p{
-        color: #ff2a49;
+  img {
+    height: 200px;
+  }
+  p {
+    color: #ff2a49;
 
-        a{
-            color: #ff2a49;
-    
-        }
-
+    a {
+      color: #ff2a49;
     }
-    .flex{
-        display: flex;
-        @media (max-width: 600px){
-              display: grid;
-              grid-template-columns: repeat(1, 1fr);
-            }
-        p{
-        }
-        .btcode{
-            color: black;
-            font-weight: bold;
-        }
+  }
+  .flex {
+    display: flex;
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
     }
-    `
+    p {
+    }
+    .btcode {
+      color: black;
+      font-weight: bold;
+    }
+  }
+`;
